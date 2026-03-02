@@ -1,0 +1,71 @@
+h1{
+      margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #333;
+}
+body{
+   
+    display: flex;
+    flex-direction: column; /*heading upar, calculator neeche*/
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 70px); /* 4 columns per row */
+    gap: 12px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Display input */
+#display {
+    grid-column: span 4; /* full width of 4 columns */
+    height: 60px;
+    font-size: 1.6rem;
+    text-align: right;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+/* All buttons */
+.btn {
+    height: 60px;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Operator buttons colors */
+.add, .sub, .mul, .div {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.ans {
+    background-color: #34c759;
+    color: #fff;
+}
+
+.ac {
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+/* Numbers gray style */
+.btn-num {
+    background-color: #e0e0e0;
+}
+
+.btn:hover {
+    opacity: 0.2;
+}
