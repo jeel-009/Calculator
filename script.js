@@ -19,10 +19,11 @@ for (let i = 0; i < btnnum.length; i++) {
        
         if (!operator) {
             firstDigits.push(btnnum[i].innerText);
-            inp.value = firstDigits.join('')
+            inp.value = firstDigits.join('');
         }else  {
             secondDigits.push(btnnum[i].innerText);
-            inp.value = secondDigits.join('');
+            inp.value = copyFirst.join("")+operator+secondDigits.join('');
+          
         }
     });
 
@@ -55,8 +56,8 @@ function operation() {
        if(firstDigits.length === 0){
             return alert('Enter a Number');
         }
-    inp.value = '';
     copyFirst = [...firstDigits];
+    inp.value = copyFirst.join('') + operator;
     firstDigits = [];
 }
 
